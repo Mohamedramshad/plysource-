@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plysource – Premium PVC, WPC, and Plywood Boards in Kerala</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Plysource – Premium PVC, WPC, and Plywood Boards in Kerala">
+  <meta name="description" content="Plysource is a trusted supplier of high-quality PVC, WPC, and plywood boards in Kerala. Serving designers, contractors, builders, and homeowners with premium boards, doors, and interior accessories.">
+  <meta name="keywords" content="Plysource, PVC Boards, WPC Boards, Plywood Sheets, Interior Materials, Kerala Boards Supplier, Doors and Accessories, Wholesale Plywood, Retail Boards, Kerala Interior Solutions">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Plysource">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://plysource.com/assets/favicon.ico" type="image/x-icon">
+
+  <style>
+    :root {
+      --primary: #35577D;
+      --primary-dark: #141E30;
+      --accent: #FF9E1B;
+      --light: #F8FAFC;
+      --gray: #64748B;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #334155;
+      background-color: var(--light);
+      overflow-x: hidden;
+    }
+    
+    .bg-primary {
+      background-color: var(--primary);
+    }
+    
+    .bg-primary-dark {
+      background-color: var(--primary-dark);
+    }
+    
+    .bg-accent {
+      background-color: var(--accent);
+    }
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-primary-dark {
+      color: var(--primary-dark);
+    }
+    
+    .text-accent {
+      color: var(--accent);
+    }
+    
+    .border-primary {
+      border-color: var(--primary);
+    }
+    
+    /* Popup Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      padding: 30px;
+      position: relative;
+      transform: translateY(50px);
+      transition: transform 0.3s ease;
+    }
+    
+    .modal.active .modal-content {
+      transform: translateY(0);
+    }
+    
+    /* Scroll to top button */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+    
+    /* Services dropdown */
+    .services-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 15px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    
+    .services-menu:hover .services-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    /* Enhanced animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+    }
+    
+    /* Slider enhancements */
+    .slider-container {
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
+    }
+    
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 70vh;
+      }
+    }
+    
+    .slider-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+    }
+    
+    .slider-slide.active {
+      opacity: 1;
+    }
+    
+    .slider-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .slider-indicators {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 10;
+    }
+    
+    .slider-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .slider-indicator.active {
+      background: white;
+      transform: scale(1.2);
+    }
+    
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.2);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+    
+    .slider-nav:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .slider-prev {
+      left: 2rem;
+    }
+    
+    .slider-next {
+      right: 2rem;
+    }
+    
+    .product-card {
+      transition: all 0.3s ease;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      background: white;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .product-image {
+      transition: transform 0.5s ease;
+      height: 220px;
+      object-fit: cover;
+    }
+    
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .section-padding {
+      padding: 100px 0;
+    }
+    
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      background: rgba(53, 87, 125, 0.1); 
+      color: var(--primary);
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(53, 87, 125, 0.1);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+      position: relative;
+      border: 1px solid rgba(53, 87, 125, 0.1);
+    }
+    
+    .testimonial-card:before {
+      content: """;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 60px;
+      color: var(--primary);
+      opacity: 0.2;
+      font-family: Arial, sans-serif;
+    }
+    
+    .cta-section {
+      background: linear-gradient(rgba(20, 30, 48, 0.9), rgba(20, 30, 48, 0.9)), url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 90px;
+      right: 25px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-accent {
+      background: var(--accent);
+      color: var(--primary-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-accent:hover {
+      background: #FFB240;
+      transform: translateY(-2px);
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: var(--accent);
+      bottom: -15px;
+      left: 0;
+    }
+    
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--primary-dark);
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(53, 87, 125, 0.1);
+    }
+    
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    .btn-whatsapp {
+      width: 100%;
+      background-color: #25d366;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn-whatsapp:hover {
+      background-color: #128c7e;
+    }
+    
+    .btn-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      color: #6b7280;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    
+    .btn-close:hover {
+      color: #374151;
+    }
+    
+    .success-message {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    .success-icon {
+      font-size: 3rem;
+      color: #10b981;
+      margin-bottom: 1rem;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .error-message {
+      color: #ef4444;
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800">
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919526744704?text=Hello%20Plysource,%20I%20would%20like%20to%20enquire%20about%20your%20products" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll to top button -->
+  <div class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+      <button class="btn-close" id="closeModal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 class="text-2xl font-bold text-primary-dark mb-6 text-center">Get In Touch</h2>
+      <form id="whatsappForm">
+        <div class="form-group">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" id="fullName" class="form-input" required>
+          <div id="fullNameError" class="error-message hidden">Please enter your full name</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="contact" class="form-label">Contact Number</label>
+          <input type="tel" id="contact" class="form-input" required>
+          <div id="contactError" class="error-message hidden">Please enter a valid contact number</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="service" class="form-label">Service Needed</label>
+          <select id="service" class="form-input" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="PVC Boards Supply">PVC Boards Supply</option>
+            <option value="WPC Boards Installation">WPC Boards Installation</option>
+            <option value="Plywood Custom Cutting">Plywood Custom Cutting</option>
+            <option value="Interior Design Consultation">Interior Design Consultation</option>
+          </select>
+          <div id="serviceError" class="error-message hidden">Please select a service</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" id="location" class="form-input" required>
+          <div id="locationError" class="error-message hidden">Please enter your location</div>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Additional Message (Optional)</label>
+          <textarea id="message" rows="3" class="form-input form-textarea"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-whatsapp">
+          <i class="fab fa-whatsapp mr-2"></i> Send via WhatsApp
+        </button>
+      </form>
+      
+      <div id="thankYouMessage" class="success-message hidden">
+        <i class="fas fa-check-circle success-icon"></i>
+        <h3 class="text-xl font-semibold text-primary-dark mb-2">Thank You!</h3>
+        <p class="text-gray-600">Your message has been sent successfully. We'll contact you shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-sm fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+      <a href="#" class="text-2xl font-bold text-primary-dark flex items-center">
+        <span class="bg-primary text-white p-2 rounded mr-2"><i class="fas fa-border-all"></i></span>
+        Plysource
+      </a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="nav-link text-primary-dark hover:text-primary font-medium transition-colors">Home</a>
+        <a href="/about.html" class="nav-link text-primary-dark hover:text-primary font-medium transition-colors">About Us</a>
+        
+        <div class="services-menu relative">
+          <a href="#services" class="nav-link text-primary-dark hover:text-primary font-medium transition-colors flex items-center">
+            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="services-dropdown">
+            <a href="#" class="block px-6 py-2 hover:bg-blue-50 text-primary-dark">PVC Board Supply</a>
+            <a href="#" class="block px-6 py-2 hover:bg-blue-50 text-primary-dark">WPC Board Installation</a>
+            <a href="#" class="block px-6 py-2 hover:bg-blue-50 text-primary-dark">Custom Cutting</a>
+            <a href="#" class="block px-6 py-2 hover:bg-blue-50 text-primary-dark">Interior Consultation</a>
+          </div>
+        </div>
+        
+        <a href="./product1.html" class="nav-link text-primary-dark hover:text-primary font-medium transition-colors">Products</a>
+        <a href="./contact.html" class="nav-link text-primary-dark hover:text-primary font-medium transition-colors">Contact</a>
+      </nav>
+      <div class="md:hidden text-2xl text-primary cursor-pointer" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed top-0 left-0 h-full w-64 bg-primary text-white z-50 p-6 md:hidden" id="mobile-menu">
+      <div class="flex justify-between items-center mb-10">
+        <a href="#" class="text-xl font-bold text-white flex items-center">
+          <span class="bg-white text-primary p-2 rounded mr-2"><i class="fas fa-border-all"></i></span>
+          Plysource
+        </a>
+        <div class="text-2xl cursor-pointer" id="close-menu">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <nav class="flex flex-col space-y-6">
+        <a href="#" class="text-lg font-medium hover:text-accent transition-colors">Home</a>
+        <a href="#about" class="text-lg font-medium hover:text-accent transition-colors">About Us</a>
+        <a href="#services" class="text-lg font-medium hover:text-accent transition-colors">Services</a>
+        <a href="#products" class="text-lg font-medium hover:text-accent transition-colors">Products</a>
+        <a href="#contact" class="text-lg font-medium hover:text-accent transition-colors">Contact</a>
+      </nav>
+      <div class="mt-10 pt-10 border-t border-blue-700">
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-primary-dark flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-primary-dark flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/919526744704" class="w-10 h-10 rounded-full bg-primary-dark flex items-center justify-center hover:bg-primary transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider Section -->
+  <section class="slider-container" id="home">
+    <!-- Slide 1 -->
+    <div class="slider-slide active" style="background-image: linear-gradient(rgba(20, 30, 48, 0.8), rgba(53, 87, 125, 0.6)), url('https://images.unsplash.com/photo-1620633430505-1e7b9f2d2ed7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+      <div class="slider-content">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">Premium Building Materials</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl animate-fadeInUp" data-aos-delay="200">High-quality PVC, WPC, and plywood solutions for all your construction needs.</p>
+        <a href="#products" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center animate-fadeInUp" data-aos-delay="400">
+          Explore Products <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="slider-slide" style="background-image: linear-gradient(rgba(20, 30, 48, 0.8), rgba(53, 87, 125, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+      <div class="slider-content">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Kerala's Trusted Supplier</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl">Serving designers, contractors, and homeowners across all districts of Kerala.</p>
+        <a href="#about" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center">
+          Learn More <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="slider-slide" style="background-image: linear-gradient(rgba(20, 30, 48, 0.8), rgba(53, 87, 125, 0.6)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+      <div class="slider-content">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Custom Solutions</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl">We provide custom sizing and cutting services tailored to your specific project requirements.</p>
+        <a href="#services" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center">
+          Our Services <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Slide 4 -->
+    <div class="slider-slide" style="background-image: linear-gradient(rgba(20, 30, 48, 0.8), rgba(53, 87, 125, 0.6)), url('https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+      <div class="slider-content">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Pan-Kerala Delivery</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl">Fast and reliable delivery service to all districts of Kerala, right to your doorstep.</p>
+        <a href="#contact" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center">
+          Contact Us <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Slider Navigation -->
+    <div class="slider-nav slider-prev">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="slider-nav slider-next">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    
+    <!-- Slider Indicators -->
+    <div class="slider-indicators">
+      <div class="slider-indicator active" data-slide="0"></div>
+      <div class="slider-indicator" data-slide="1"></div>
+      <div class="slider-indicator" data-slide="2"></div>
+      <div class="slider-indicator" data-slide="3"></div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section-padding bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-10 left-10 w-40 h-40 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-amber-200 rounded-full opacity-30 animate-bounce-slow"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Why Choose <span class="text-blue-700">Plysource</span>?
+        </h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+          As Kerala's leading supplier of premium building materials, Plysource provides exceptional quality PVC boards, WPC boards, and plywood solutions with unmatched service across all districts of Kerala.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2" 
+             data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:text-amber-700 transition-colors duration-500">
+              <i class="fas fa-award text-3xl text-blue-600"></i>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-gray-900 group-hover:text-blue-800 transition-colors duration-300">
+            Premium Quality Materials
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Plysource offers only the highest-grade PVC boards, WPC boards, and plywood sheets sourced from trusted manufacturers. Our materials undergo rigorous quality checks to ensure exceptional durability, moisture resistance, and longevity for all your construction projects in Kerala.
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300">
+            <ul class="text-left text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Industry-leading durability</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Moisture and termite resistant</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Certified quality standards</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2" 
+             data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:text-amber-700 transition-colors duration-500">
+              <i class="fas fa-truck-fast text-3xl text-blue-600"></i>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-gray-900 group-hover:text-blue-800 transition-colors duration-300">
+            Statewide Delivery Network
+          </h3>
+          <p class="text-gray-700 mb-4">
+            With our extensive logistics network, Plysource delivers premium building materials to all 14 districts of Kerala. From Thiruvananthapuram to Kasargod, we ensure timely and secure delivery of your PVC boards, WPC boards, and plywood sheets right to your construction site or doorstep.
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300">
+            <ul class="text-left text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Coverage across all Kerala districts</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Timely and reliable delivery</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Careful handling and transport</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2" 
+             data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+            <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:text-amber-700 transition-colors duration-500">
+              <i class="fas fa-scissors text-3xl text-blue-600"></i>
+            </div>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4 text-gray-900 group-hover:text-blue-800 transition-colors duration-300">
+            Precision Custom Cutting
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Our advanced cutting technology ensures your materials are sized to exact specifications. Whether you need custom-sized PVC boards for interior paneling, WPC boards for outdoor decking, or plywood sheets for furniture, our precision cutting service minimizes waste and ensures perfect fit for your projects.
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-100 group-hover:border-blue-200 transition-colors duration-300">
+            <ul class="text-left text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Computer-guided precision cutting</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Minimal material waste</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-amber-500 mr-2"></i>
+                <span>Custom sizes for unique projects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO Content Section -->
+      <div class="mt-20 bg-white rounded-2xl p-8 shadow-lg border border-blue-100" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+          Premium Building Materials Supplier in Kerala
+        </h3>
+        <div class="prose prose-lg max-w-none text-gray-700">
+          <p class="mb-4">
+            <strong>Plysource</strong> is Kerala's trusted partner for high-quality construction materials, specializing in <strong>PVC boards</strong>, <strong>WPC boards</strong>, and <strong>plywood sheets</strong>. Serving contractors, builders, interior designers, and homeowners across all districts of Kerala, we provide solutions for residential, commercial, and industrial projects.
+          </p>
+          <p class="mb-4">
+            Our extensive product range includes moisture-resistant <strong>PVC panels</strong> for bathrooms and kitchens, durable <strong>WPC boards</strong> for outdoor applications, and premium <strong>plywood</strong> for furniture and interior work. Whether you're working on a home renovation in Kochi, a commercial project in Thiruvananthapuram, or a new construction in Kozhikode, Plysource delivers quality materials with reliable service.
+          </p>
+          <p>
+            With a commitment to excellence and customer satisfaction, we've established ourselves as Kerala's preferred supplier for building materials. Our team of experts provides guidance on material selection, application techniques, and maintenance, ensuring your projects achieve both aesthetic appeal and structural integrity.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .animate-bounce-slow {
+        animation: bounce-slow 4s infinite;
+      }
+      
+      @keyframes bounce-slow {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-15px);
+        }
+        60% {
+          transform: translateY(-7px);
+        }
+      }
+      
+      .feature-icon {
+        transition: all 0.5s ease;
+      }
+    </style>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-72 h-72 bg-blue-200 rounded-full -translate-y-36 translate-x-36 opacity-30"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-amber-200 rounded-full translate-y-48 -translate-x-48 opacity-30"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 relative pb-4">
+            About <span class="text-blue-700">Plysource</span>
+            <span class="absolute bottom-0 left-0 w-24 h-1.5 bg-amber-500 rounded-full"></span>
+            <span class="absolute bottom-0 left-0 w-12 h-1.5 bg-blue-700 rounded-full animate-pulse"></span>
+          </h2>
+          
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed transition-all duration-500 hover:bg-blue-50 hover:px-4 hover:py-3 hover:rounded-xl">
+            <span class="font-semibold text-blue-800 relative">
+              <span class="absolute -inset-1 bg-amber-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span class="relative">Plysource is Kerala's premier supplier</span>
+            </span> of premium building materials, specializing in PVC, WPC, and plywood boards. With years of industry experience, we've built an unparalleled reputation for quality and reliability.
+          </p>
+          
+          <p class="text-xl text-gray-700 mb-12 leading-relaxed transition-all duration-500 hover:bg-blue-50 hover:px-4 hover:py-3 hover:rounded-xl">
+            We serve a diverse clientele including 
+            <span class="font-semibold text-blue-800 relative">
+              <span class="absolute -inset-1 bg-amber-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span class="relative">interior designers, contractors, builders, and homeowners</span>
+            </span>, providing them with the finest materials to bring their visionary projects to life.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2">
+              <div class="text-4xl font-bold text-blue-700 mb-2 transition-all duration-500 group-hover:text-amber-600 group-hover:scale-110" id="counter1">0</div>
+              <div class="text-gray-600 font-medium">Projects Completed</div>
+              <div class="mt-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:scale-110 transition-all duration-500">
+                  <i class="fas fa-project-diagram text-blue-600 text-xl group-hover:text-amber-600"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2">
+              <div class="text-4xl font-bold text-blue-700 mb-2 transition-all duration-500 group-hover:text-amber-600 group-hover:scale-110" id="counter2">0</div>
+              <div class="text-gray-600 font-medium">Districts Covered</div>
+              <div class="mt-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:scale-110 transition-all duration-500">
+                  <i class="fas fa-map-marked-alt text-blue-600 text-xl group-hover:text-amber-600"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-blue-100 hover:border-amber-300 hover:-translate-y-2">
+              <div class="text-4xl font-bold text-blue-700 mb-2 transition-all duration-500 group-hover:text-amber-600 group-hover:scale-110" id="counter3">0</div>
+              <div class="text-gray-600 font-medium">Happy Clients</div>
+              <div class="mt-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-100 group-hover:scale-110 transition-all duration-500">
+                  <i class="fas fa-smile-beam text-blue-600 text-xl group-hover:text-amber-600"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-900 text-white font-semibold rounded-full hover:from-blue-800 hover:to-blue-950 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center group">
+              <span>Contact Us</span>
+              <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="#products" class="px-8 py-4 border-2 border-blue-700 text-blue-700 font-semibold rounded-full hover:bg-blue-700 hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center group">
+              <span>Our Products</span>
+              <i class="fas fa-box-open ml-2 group-hover:rotate-12 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-2xl transition-all duration-700 group">
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" 
+                 alt="About Plysource" 
+                 class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-20">
+              <h3 class="text-2xl font-bold mb-2">Quality Materials</h3>
+              <p class="opacity-90">Premium PVC, WPC & Plywood solutions</p>
+            </div>
+          </div>
+          
+          <!-- Experience badge -->
+          <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white py-4 px-6 rounded-2xl shadow-xl animate-bounce-slow z-20">
+            <div class="text-3xl font-bold">15+</div>
+            <div class="text-sm">Years of Experience</div>
+          </div>
+          
+          <!-- Quality badge -->
+          <div class="absolute -top-4 -right-4 bg-white py-3 px-5 rounded-2xl shadow-xl z-20 rotate-3 hover:rotate-0 transition-transform duration-300">
+            <div class="flex items-center">
+              <i class="fas fa-award text-amber-600 mr-2"></i>
+              <div>
+                <div class="font-bold text-blue-900">Premium</div>
+                <div class="text-xs text-gray-600">Quality</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .animate-bounce-slow {
+        animation: bounce-slow 3s infinite;
+      }
+      
+      @keyframes bounce-slow {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="section-padding gradient-bg">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 section-title mx-auto">Our Products</h2>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">Explore our wide range of premium building materials for all your construction needs.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1590540180092-65f173691f0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="PVC Boards" class="product-image w-full">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">PVC Boards</h3>
+            <p class="text-gray-600 mb-4">Water-resistant, durable and perfect for bathrooms, kitchens and outdoor applications.</p>
+            <a href="#contact" class="text-primary font-medium inline-flex items-center hover:text-primary-dark">
+              Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1620633430505-1e7b9f2d2ed7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="WPC Boards" class="product-image w-full">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">WPC Boards</h3>
+            <p class="text-gray-600 mb-4">Eco-friendly wood-plastic composite boards that combine the best properties of wood and plastic.</p>
+            <a href="#contact" class="text-primary font-medium inline-flex items-center hover:text-primary-dark">
+              Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1605108721178-97a9514c0b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Plywood Sheets" class="product-image w-full">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-primary-dark">Plywood Sheets</h3>
+            <p class="text-gray-600 mb-4">High-quality plywood in various grades and thicknesses for all your construction needs.</p>
+            <a href="#contact" class="text-primary font-medium inline-flex items-center hover:text-primary-dark">
+              Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12" data-aos="fade-up">
+        <a href="#contact" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center">
+          Request Quote <i class="fas fa-envelope ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section-padding bg-gradient">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 section-title mx-auto">Our Services</h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">Beyond supplying materials, we offer value-added services to make your projects easier.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100 transform transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-container w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300">
+            <i class="fas fa-ruler-combined text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary-dark">Custom Sizing</h3>
+          <p class="text-gray-600">Get materials cut to your exact specifications for perfect fit and minimal waste.</p>
+          <div class="wave-border mt-6"></div>
+        </div>
+        
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100 transform transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-container w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300">
+            <i class="fas fa-truck text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary-dark">Delivery Service</h3>
+          <p class="text-gray-600">We deliver across Kerala with careful handling to ensure materials arrive in perfect condition.</p>
+          <div class="wave-border mt-6"></div>
+        </div>
+        
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100 transform transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-container w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300">
+            <i class="fas fa-headset text-purple-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary-dark">Expert Consultation</h3>
+          <p class="text-gray-600">Get advice from our experts on the best materials for your specific project requirements.</p>
+          <div class="wave-border mt-6"></div>
+        </div>
+        
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg text-center border border-gray-100 transform transition-all duration-300 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon-container w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300">
+            <i class="fas fa-box-open text-orange-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary-dark">Bulk Orders</h3>
+          <p class="text-gray-600">Special pricing and priority processing for large volume orders from contractors and builders.</p>
+          <div class="wave-border mt-6"></div>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      .bg-gradient {
+        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      }
+      
+      .service-card {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      
+      .service-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      
+      .service-card:hover .icon-container {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      
+      .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+      
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #3b82f6, #1e40af);
+        border-radius: 2px;
+      }
+      
+      .wave-border {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .service-card:hover .wave-border {
+        opacity: 1;
+        animation: wave 1.5s infinite linear;
+      }
+      
+      @keyframes wave {
+        0% {
+          background-position: -100px 0;
+        }
+        100% {
+          background-position: 100px 0;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- Testimonials Section -->
+<section class="section-padding bg-gradient-to-br from-blue-25 to-indigo-50 relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-10 left-10 w-40 h-40 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-amber-100 rounded-full opacity-30 animate-bounce-slow"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                What Our <span class="text-blue-700">Clients Say</span>
+            </h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                Hear from interior designers, contractors, and homeowners across Kerala who trust Plysource for their premium material needs
+            </p>
+        </div>
+
+        <!-- Testimonials Slider -->
+        <div class="relative">
+            <!-- Slider Container -->
+            <div class="testimonial-slider-container overflow-hidden rounded-3xl">
+                <div class="testimonial-slider-track flex transition-transform duration-500 ease-in-out" id="testimonialTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    GH
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Shafeeq</h4>
+                                    <p class="text-blue-600 font-medium">G Home Interiors</p>
+                                    <p class="text-gray-500 text-sm">Calicut</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "Plysource has been our trusted partner for over 3 years. Their PVC boards have transformed our interior projects with exceptional quality and durability."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    LI
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Naseef</h4>
+                                    <p class="text-blue-600 font-medium">LIRO Interiors</p>
+                                    <p class="text-gray-500 text-sm">Calicut</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "The precision cutting service saves us 40% on material waste. Plysource's attention to detail matches our high standards perfectly."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    VI
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Sujith</h4>
+                                    <p class="text-blue-600 font-medium">Vishwakarma Interiors</p>
+                                    <p class="text-gray-500 text-sm">Tirur</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "Reliable delivery across Malappuram district. Their WPC boards have become our first choice for outdoor projects due to excellent weather resistance."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    DC
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Jabir</h4>
+                                    <p class="text-blue-600 font-medium">DCRAFT</p>
+                                    <p class="text-gray-500 text-sm">Calicut</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "Premium quality materials that elevate our designs. Plysource understands the needs of creative professionals and delivers consistently."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    LC
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Saleesh</h4>
+                                    <p class="text-blue-600 font-medium">Lacasa Interiors</p>
+                                    <p class="text-gray-500 text-sm">Thrissur</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "From Thrissur to Palakkad, Plysource's delivery network ensures we get materials on time. Their customer service is exceptional."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="testimonial-card-premium bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex items-center mb-6">
+                                <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    DI
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-blue-900">Mr. Kuttan</h4>
+                                    <p class="text-blue-600 font-medium">Di Interiors</p>
+                                    <p class="text-gray-500 text-sm">Parappanangadi</p>
+                                </div>
+                            </div>
+                            <div class="text-amber-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed italic">
+                                "As a local interior firm, we value suppliers who understand Kerala's climate challenges. Plysource's moisture-resistant materials are perfect for our coastal projects."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="testimonial-nav testimonial-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white shadow-2xl rounded-full w-12 h-12 flex items-center justify-center text-blue-700 hover:bg-blue-50 transition-all duration-300 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="testimonial-nav testimonial-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-2xl rounded-full w-12 h-12 flex items-center justify-center text-blue-700 hover:bg-blue-50 transition-all duration-300 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-8 space-x-3" id="testimonialDots">
+            <!-- Dots will be generated by JavaScript -->
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="mt-16 bg-white rounded-3xl shadow-xl p-8 border border-blue-100" data-aos="fade-up">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-blue-900 mb-2">50+</div>
+                    <div class="text-gray-600 font-medium">Interior Partners</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-900 mb-2">14</div>
+                    <div class="text-gray-600 font-medium">Districts Covered</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-900 mb-2">4.9/5</div>
+                    <div class="text-gray-600 font-medium">Customer Rating</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-blue-900 mb-2">98%</div>
+                    <div class="text-gray-600 font-medium">Repeat Business</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .bg-blue-25 {
+            background-color: #f8fafc;
+        }
+
+        .testimonial-slider-container {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .testimonial-slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card-premium {
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .testimonial-card-premium:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-card-premium:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 80px;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .animate-bounce-slow {
+            animation: bounce-slow 4s infinite;
+        }
+
+        @keyframes bounce-slow {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Dot indicators */
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background: #3b82f6;
+            transform: scale(1.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .testimonial-slide {
+                width: 100%;
+            }
+            
+            .testimonial-nav {
+                display: none;
+            }
+        }
+
+        /* AOS animation styles */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(50px);
+        }
+
+        [data-aos].aos-animate {
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('testimonialTrack');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dotsContainer = document.getElementById('testimonialDots');
+            const prevBtn = document.querySelector('.testimonial-prev');
+            const nextBtn = document.querySelector('.testimonial-next');
+            
+            let currentIndex = 0;
+            const slidesPerView = getSlidesPerView();
+            
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = `testimonial-dot ${index === 0 ? 'active' : ''}`;
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+            
+            function getSlidesPerView() {
+                if (window.innerWidth >= 1024) return 3;
+                if (window.innerWidth >= 768) return 2;
+                return 1;
+            }
+            
+            function updateSlider() {
+                const slideWidth = 100 / slidesPerView;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                
+                // Update dots
+                document.querySelectorAll('.testimonial-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function goToSlide(index) {
+                const maxIndex = slides.length - slidesPerView;
+                currentIndex = Math.max(0, Math.min(index, maxIndex));
+                updateSlider();
+            }
+            
+            function nextSlide() {
+                const maxIndex = slides.length - slidesPerView;
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateSlider();
+            }
+            
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = slides.length - slidesPerView;
+                }
+                updateSlider();
+            }
+            
+            // Event listeners
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+            
+            // Touch swipe support
+            let startX = 0;
+            let endX = 0;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            track.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                }
+            }
+            
+            // Auto slide
+            let autoSlideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto slide on hover
+            track.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            track.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Responsive handling
+            window.addEventListener('resize', () => {
+                const newSlidesPerView = getSlidesPerView();
+                if (newSlidesPerView !== slidesPerView) {
+                    currentIndex = 0;
+                    updateSlider();
+                }
+            });
+            
+            // Initialize
+            updateSlider();
+        });
+    </script>
+</section>
+
+  <!-- CTA Section -->
+  <section class="cta-section py-20 text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Start Your Project?</h2>
+      <p class="text-xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Get in touch with us today for quotes, product information, or expert advice on your next project.</p>
+      <button id="openModal" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Contact Us Now <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4 section-title mx-auto">Contact Us</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Reach out to us for quotes, product information, or any questions you may have.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <form class="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+            <div class="mb-6">
+              <label for="name" class="block text-primary-dark mb-2">Full Name</label>
+              <input type="text" id="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="email" class="block text-primary-dark mb-2">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="phone" class="block text-primary-dark mb-2">Phone Number</label>
+              <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            </div>
+            
+            <div class="mb-6">
+              <label for="message" class="block text-primary-dark mb-2">Message</label>
+              <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full btn-primary font-semibold py-4 rounded-lg transition">Send Message</button>
+          </form>
+        </div>
+        
+        <div data-aos="fade-left">
+          <div class="bg-white p-8 rounded-lg shadow-md mb-8 border border-gray-100">
+            <h3 class="text-xl font-semibold mb-6 text-primary-dark">Contact Information</h3>
+            
+            <div class="flex items-start mb-6">
+              <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-dark">Address</h4>
+                <p class="text-gray-600">123 Building Materials Street, Industrial Area, Kochi, Kerala</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-6">
+              <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-phone-alt text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-dark">Phone</h4>
+                <p class="text-gray-600">+91 9876543210</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start mb-6">
+              <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-envelope text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-dark">Email</h4>
+                <p class="text-gray-600">info@plysource.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+            <h3 class="text-xl font-semibold mb-6 text-primary-dark">Business Hours</h3>
+            
+            <div class="flex justify-between mb-3">
+              <span class="text-gray-600">Monday - Friday</span>
+              <span class="font-semibold text-primary-dark">9:00 AM - 6:00 PM</span>
+            </div>
+            
+            <div class="flex justify-between mb-3">
+              <span class="text-gray-600">Saturday</span>
+              <span class="font-semibold text-primary-dark">10:00 AM - 4:00 PM</span>
+            </div>
+            
+            <div class="flex justify-between">
+              <span class="text-gray-600">Sunday</span>
+              <span class="font-semibold text-primary-dark">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <a href="#" class="text-2xl font-bold text-white flex items-center mb-6">
+            <span class="bg-white text-primary p-2 rounded mr-2"><i class="fas fa-border-all"></i></span>
+            Plysource
+          </a>
+          <p class="text-blue-200 mb-6">Kerala's trusted supplier of premium PVC, WPC, and plywood boards for all your construction needs.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-700 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-700 transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/919526744704" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-blue-700 transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Home</a></li>
+            <li><a href="#about" class="text-blue-200 hover:text-white transition">About Us</a></li>
+            <li><a href="#products" class="text-blue-200 hover:text-white transition">Products</a></li>
+            <li><a href="#services" class="text-blue-200 hover:text-white transition">Services</a></li>
+            <li><a href="#contact" class="text-blue-200 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Products</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-blue-200 hover:text-white transition">PVC Boards</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">WPC Boards</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Plywood Sheets</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Doors & Accessories</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Interior Solutions</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+          <p class="text-blue-200 mb-6">Subscribe to our newsletter for updates on new products and special offers.</p>
+          <form>
+            <div class="flex">
+              <input type="email" placeholder="Your email" class="px-4 py-3 w-full rounded-l-lg focus:outline-none text-gray-800">
+              <button type="submit" class="bg-accent text-primary-dark font-semibold px-4 rounded-r-lg hover:bg-yellow-400 transition">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300">
+        <p>&copy; 2023 Plysource. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
+      
+      // Show popup modal after 2 seconds
+      setTimeout(function() {
+        document.getElementById('contactModal').classList.add('active');
+      }, 2000);
+      
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const closeMenuButton = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+      
+      closeMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      });
+      
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('open');
+          document.body.style.overflow = 'auto';
+        });
+      });
+      
+      // Modal functionality
+      const modal = document.getElementById('contactModal');
+      const openModalButton = document.getElementById('openModal');
+      const closeModalButton = document.getElementById('closeModal');
+      const whatsappForm = document.getElementById('whatsappForm');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      
+      openModalButton.addEventListener('click', function() {
+        modal.classList.add('active');
+      });
+      
+      closeModalButton.addEventListener('click', function() {
+        modal.classList.remove('active');
+      });
+      
+      // Close modal when clicking outside
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+      
+      // WhatsApp form submission
+      whatsappForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Reset error messages
+        document.querySelectorAll('.error-message').forEach(error => {
+          error.classList.add('hidden');
+        });
+        
+        // Get form values
+        const fullName = document.getElementById('fullName').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const service = document.getElementById('service').value;
+        const location = document.getElementById('location').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        let isValid = true;
+        
+        // Validate full name
+        if (!fullName) {
+          document.getElementById('fullNameError').classList.remove('hidden');
+          isValid = false;
+        }
+        
+        // Validate contact
+        if (!contact || !/^[0-9]{10}$/.test(contact)) {
+          document.getElementById('contactError').classList.remove('hidden');
+          isValid = false;
+        }
+        
+        // Validate service
+        if (!service) {
+          document.getElementById('serviceError').classList.remove('hidden');
+          isValid = false;
+        }
+        
+        // Validate location
+        if (!location) {
+          document.getElementById('locationError').classList.remove('hidden');
+          isValid = false;
+        }
+        
+        // If form is valid, proceed with submission
+        if (isValid) {
+          const whatsappMessage = `Hello Plysource,%0A%0A*Name:* ${fullName}%0A*Contact:* ${contact}%0A*Service Needed:* ${service}%0A*Location:* ${location}%0A*Message:* ${message || 'No additional message'}`;
+          
+          // Hide form and show thank you message
+          whatsappForm.classList.add('hidden');
+          thankYouMessage.classList.remove('hidden');
+          
+          // Open WhatsApp after a short delay
+          setTimeout(function() {
+            window.open(`https://wa.me/919526744704?text=${whatsappMessage}`, '_blank');
+          }, 1500);
+          
+          // Reset form after 5 seconds
+          setTimeout(function() {
+            whatsappForm.reset();
+            whatsappForm.classList.remove('hidden');
+            thankYouMessage.classList.add('hidden');
+            modal.classList.remove('active');
+          }, 5000);
+        }
+      });
+      
+      // Scroll to top functionality
+      const scrollTopButton = document.getElementById('scrollTop');
+      
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          scrollTopButton.classList.add('active');
+        } else {
+          scrollTopButton.classList.remove('active');
+        }
+      });
+      
+      scrollTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Slider functionality
+      const slides = document.querySelectorAll('.slider-slide');
+      const indicators = document.querySelectorAll('.slider-indicator');
+      const prevButton = document.querySelector('.slider-prev');
+      const nextButton = document.querySelector('.slider-next');
+      let currentSlide = 0;
+      
+      function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Show the selected slide
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+      }
+      
+      // Next slide
+      function nextSlide() {
+        let next = currentSlide + 1;
+        if (next >= slides.length) next = 0;
+        showSlide(next);
+      }
+      
+      // Previous slide
+      function prevSlide() {
+        let prev = currentSlide - 1;
+        if (prev < 0) prev = slides.length - 1;
+        showSlide(prev);
+      }
+      
+      // Add event listeners
+      nextButton.addEventListener('click', nextSlide);
+      prevButton.addEventListener('click', prevSlide);
+      
+      // Add click events to indicators
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+      });
+      
+      // Auto slide
+      setInterval(nextSlide, 5000);
+      
+      // Counter animation
+      function animateCounter(elementId, target) {
+        const element = document.getElementById(elementId);
+        const duration = 2000; // Animation duration in ms
+        const steps = 60; // Number of steps
+        const stepDuration = duration / steps;
+        const stepValue = target / steps;
+        
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += stepValue;
+          if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current) + '+';
+          }
+        }, stepDuration);
+      }
+      
+      // Start counters when section is in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter('counter1', 500);
+            animateCounter('counter2', 14);
+            animateCounter('counter3', 1000);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      observer.observe(document.getElementById('about'));
+    });
+  </script>
+</body>
+</html>
