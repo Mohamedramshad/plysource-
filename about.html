@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Plysource - Premium Interior Materials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #35577D;
+            --primary-dark: #141E30;
+            --accent: #FF9E1B;
+            --light: #F8FAFC;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fafb;
+            color: #334155;
+            scroll-behavior: smooth;
+        }
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .floating {
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        
+        .image-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .image-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(20, 30, 48, 0.4) 0%, rgba(53, 87, 125, 0.2) 100%);
+            z-index: 1;
+        }
+        
+        .image-container img {
+            transition: transform 1.2s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.1);
+        }
+        
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 158, 27, 0.1);
+            z-index: -1;
+        }
+        
+        .highlight-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight-text:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 158, 27, 0.3);
+            bottom: 5px;
+            left: 0;
+            z-index: -1;
+            transition: height 0.3s ease;
+        }
+        
+        .highlight-text:hover:after {
+            height: 15px;
+        }
+        
+        .counter {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            transition: all 0.5s ease;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.6s ease;
+        }
+        
+        .stat-card:hover:before {
+            height: 100%;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: -15px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            width: 2px;
+            height: calc(100% + 25px);
+            background: var(--primary);
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .bg-pattern {
+            background-image: radial-gradient(rgba(20, 30, 48, 0.1) 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            color: var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background: #FFB240;
+            transform: translateY(-2px);
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+        
+        /* New enhanced styles */
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+        }
+        
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        
+        .floating-shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .floating-shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background: rgba(53, 87, 125, 0.1);
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid var(--accent);
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            z-index: 2;
+        }
+        
+        .team-image {
+            transition: all 0.5s ease;
+        }
+        
+        .team-card:hover .team-image {
+            transform: scale(1.1);
+        }
+        
+        .cta-section {
+            background: linear-gradient(rgba(20, 30, 48, 0.9), rgba(20, 30, 48, 0.9)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-dot.active {
+            background: transparent;
+            border-color: var(--accent);
+            transform: scale(1.5);
+        }
+        
+        .nav-dot:hover {
+            transform: scale(1.5);
+        }
+        
+        .founder-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .founder-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .founder-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .founder-card:hover .founder-image img {
+            transform: scale(1.05);
+        }
+        
+        .founder-content {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .founder-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+        
+        .founder-title {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .founder-bio {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* Mobile Menu Styles - FIXED */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 50;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            padding: 2rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Footer Styles */
+        .footer-gradient {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-dots {
+                display: none;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            /* Mobile menu styles */
+            .mobile-menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header>
+        <div class="container mx-auto px-6 header-content">
+            <div class="logo">
+                <a href="#" class="flex items-center">
+        <img src="./images/logos.png" alt="Plysource Logo" class="w-28 sm:w-36 md:w-44">
+      </a>
+                
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="text-blue-700">About</a></li>
+                    <!-- <li><a href="products.html">Products</a></li> -->
+                    <!-- <li><a href="services.html">Services</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact" class="px-5 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-full hover:from-amber-600 hover:to-amber-700 transition-all shadow-md hover:shadow-lg">Get Quote</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Sidebar - FIXED -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="flex justify-between items-center mb-10">
+            <a href="#" class="text-3xl font-extrabold text-blue-700 flex items-center">
+                <i class="fas fa-layer-group text-amber-500 mr-2"></i> Plysource
+            </a>
+            <button id="close-menu" class="text-gray-600 text-3xl hover:text-red-500 transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-6 font-semibold text-xl">
+            <a href="index.html" class="text-blue-700 hover:text-amber-500 transition border-b pb-2">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-700 transition border-b pb-2">About Us</a>
+            <!-- <a href="products.html" class="text-gray-700 hover:text-blue-700 transition border-b pb-2">Products</a> -->
+            <!-- <a href="services.html" class="text-gray-700 hover:text-blue-700 transition border-b pb-2">Services</a> -->
+            <a href="contact.html" class="text-gray-700 hover:text-blue-700 transition border-b pb-2">Contact</a>
+            <a href="#contact" class="pt-4 text-accent hover:text-amber-600 transition">Get Quote Now</a>
+        </nav>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="hero"></div>
+        <div class="nav-dot" data-section="stats"></div>
+        <div class="nav-dot" data-section="story"></div>
+        <div class="nav-dot" data-section="values"></div>
+        <div class="nav-dot" data-section="journey"></div>
+        <div class="nav-dot" data-section="founder"></div>
+        <div class="nav-dot" data-section="cta"></div>
+    </div>
+
+    <!-- About Header Section -->
+    <section id="hero" class="pt-32 pb-20 hero-gradient text-white relative overflow-hidden">
+        <!-- Enhanced decorative elements -->
+        <div class="floating-shape floating-shape-1"></div>
+        <div class="floating-shape floating-shape-2"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About <span class="text-amber-400">Plysource</span></h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">Kerala's Premier Interior Materials Supplier Since 2010</p>
+                    <p class="text-lg mb-10 text-blue-100">We provide high-quality PVC, WPC, and plywood solutions to contractors, builders, and homeowners across all districts of Kerala.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#story" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center">
+                            Our Story <i class="fas fa-book-open ml-2"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transition inline-flex items-center">
+                            Contact Us <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="image-container floating w-full max-w-md">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" alt="Plysource Interior Materials">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center stat-card">
+                    <div class="stat-number mb-2" id="counter1">0</div>
+                    <div class="text-gray-600 font-medium">Projects Completed</div>
+                </div>
+                <div class="text-center stat-card">
+                    <div class="stat-number mb-2" id="counter2">0</div>
+                    <div class="text-gray-600 font-medium">Districts Covered</div>
+                </div>
+                <div class="text-center stat-card">
+                    <div class="stat-number mb-2" id="counter3">0</div>
+                    <div class="text-gray-600 font-medium">Happy Clients</div>
+                </div>
+                <div class="text-center stat-card">
+                    <div class="stat-number mb-2">15+</div>
+                    <div class="text-gray-600 font-medium">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Story Section -->
+<section id="story" class="section-padding bg-gradient-to-br from-blue-25 to-indigo-50 relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-10 left-10 w-40 h-40 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-32 h-32 bg-amber-100 rounded-full opacity-30 animate-bounce-slow"></div>
+    <div class="absolute top-1/3 right-1/4 w-20 h-20 bg-blue-200 rounded-lg opacity-20 rotate-45 floating"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our <span class="text-blue-700">Story</span>
+            </h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                From a vision to Kerala's most trusted interior materials supplier
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right" data-aos-delay="200">
+                <div class="relative">
+                    <!-- Main Image Container -->
+                    <div class="image-container-premium rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-700">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80" 
+                             alt="Plysource Premium Materials" 
+                             class="w-full h-96 object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg transform -rotate-6 floating">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-award text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-semibold text-blue-900">Premium</div>
+                                    <div class="text-xs text-gray-600">Quality</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute bottom-6 right-6 bg-amber-500 text-white p-4 rounded-2xl shadow-lg transform rotate-3 pulse">
+                            <div class="text-2xl font-bold">15+</div>
+                            <div class="text-sm">Years Excellence</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Small Decorative Images -->
+                    <!-- <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl overflow-hidden shadow-xl border-4 border-white transform rotate-12 floating" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="https://images.unsplash.com/photo-1590540180092-65f173691f0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="PVC Boards" 
+                             class="w-full h-full object-cover">
+                    </div> -->
+                    
+                    <!-- <div class="absolute -top-6 -right-6 w-28 h-28 rounded-2xl overflow-hidden shadow-xl border-4 border-white transform -rotate-12 floating" data-aos="zoom-in" data-aos-delay="600">
+                        <img src="https://images.unsplash.com/photo-1620633430505-1e7b9f2d2ed7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="WPC Boards" 
+                             class="w-full h-full object-cover">
+                    </div> -->
+                </div>
+            </div>
+            
+            <div data-aos="fade-left" data-aos-delay="300">
+                <div class="space-y-8">
+                    <!-- Story Content -->
+                    <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                        <h3 class="text-3xl font-bold text-blue-900 mb-6 relative">
+                            From Vision to Reality
+                            <span class="absolute bottom-0 left-0 w-16 h-1 bg-amber-500 rounded-full"></span>
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                <span class="highlight-text-premium">Founded in 2010</span>, Plysource began with a clear vision: to revolutionize Kerala's interior materials industry by providing premium quality PVC, WPC, and plywood solutions.
+                            </p>
+                            
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                What started as a modest operation has blossomed into Kerala's most trusted supplier, serving <span class="highlight-text-premium">contractors, builders, and homeowners</span> across all 14 districts.
+                            </p>
+                            
+                            <div class="flex items-start space-x-4 p-4 bg-blue-50 rounded-2xl border-l-4 border-blue-600">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-bullseye text-white text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-blue-900 mb-2">Our Mission</h4>
+                                    <p class="text-gray-700">To provide premium quality interior materials that empower our customers to bring their construction visions to life, while maintaining the highest standards of service and reliability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Values Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-md border border-blue-100 text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-900 mb-1">Quality First</h4>
+                            <p class="text-sm text-gray-600">Never compromise</p>
+                        </div>
+                        
+                        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-md border border-blue-100 text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-900 mb-1">Customer Focus</h4>
+                            <p class="text-sm text-gray-600">Your success matters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl shadow-2xl p-8 border border-blue-100 relative overflow-hidden" data-aos="fade-up">
+    <!-- Background Pattern -->
+    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full -translate-y-16 translate-x-16 opacity-20"></div>
+    <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-200 rounded-full translate-y-12 -translate-x-12 opacity-30"></div>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+        <!-- Projects Completed -->
+        <div class="group transform transition-all duration-300 hover:scale-105">
+            <div class="relative">
+                <div class="text-4xl font-bold text-blue-900 mb-3 flex items-center justify-center">
+                    <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">2500+</span>
+                </div>
+                <div class="text-gray-700 font-semibold text-lg">Projects Completed</div>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+        
+        <!-- Districts Covered -->
+        <div class="group transform transition-all duration-300 hover:scale-105">
+            <div class="relative">
+                <div class="text-4xl font-bold text-blue-900 mb-3 flex items-center justify-center">
+                    <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">14+</span>
+                </div>
+                <div class="text-gray-700 font-semibold text-lg">Districts Covered</div>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+        
+        <!-- Happy Clients -->
+        <div class="group transform transition-all duration-300 hover:scale-105">
+            <div class="relative">
+                <div class="text-4xl font-bold text-blue-900 mb-3 flex items-center justify-center">
+                    <span class="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">2000+</span>
+                </div>
+                <div class="text-gray-700 font-semibold text-lg">Happy Clients</div>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+        
+        <!-- Years Experience -->
+        <div class="group transform transition-all duration-300 hover:scale-105">
+            <div class="relative">
+                <div class="text-4xl font-bold text-blue-900 mb-3 flex items-center justify-center">
+                    <span class="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">15+</span>
+                </div>
+                <div class="text-gray-700 font-semibold text-lg">Years Experience</div>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <style>
+        .bg-blue-25 {
+            background-color: #f8fafc;
+        }
+        
+        .image-container-premium {
+            position: relative;
+            transition: all 0.7s ease;
+        }
+        
+        .image-container-premium:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .highlight-text-premium {
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+            color: #1e40af;
+        }
+        
+        .highlight-text-premium:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, transparent, rgba(255, 158, 27, 0.4), transparent);
+            bottom: 2px;
+            left: 0;
+            z-index: -1;
+            border-radius: 4px;
+            transform: skewX(-15deg);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 10px 25px rgba(255, 158, 27, 0.3); }
+            100% { transform: scale(1.05); box-shadow: 0 15px 35px rgba(255, 158, 27, 0.5); }
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce-slow 4s infinite;
+        }
+        
+        @keyframes bounce-slow {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* AOS animation styles */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+        
+        [data-aos="fade-right"] {
+            transform: translateX(-50px);
+        }
+        
+        [data-aos="fade-left"] {
+            transform: translateX(50px);
+        }
+        
+        [data-aos="fade-up"] {
+            transform: translateY(50px);
+        }
+        
+        [data-aos="zoom-in"] {
+            transform: scale(0.9);
+        }
+        
+        [data-aos].aos-animate {
+            transform: translateX(0) translateY(0) scale(1);
+        }
+    </style>
+
+    <script>
+        // Simple AOS implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            const aosElements = document.querySelectorAll('[data-aos]');
+            
+            function checkScroll() {
+                aosElements.forEach(element => {
+                    const position = element.getBoundingClientRect();
+                    
+                    // If element is in viewport
+                    if(position.top < window.innerHeight * 0.85 && position.bottom >= 0) {
+                        const delay = element.getAttribute('data-aos-delay') || 0;
+                        
+                        setTimeout(function() {
+                            element.classList.add('aos-animate');
+                        }, parseInt(delay));
+                    }
+                });
+            }
+            
+            // Check on load and scroll
+            checkScroll();
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</section>
+
+    <!-- Values Section -->
+    <section id="values" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 section-title mx-auto">Our <span class="text-blue-700">Values</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="value-card text-center p-8 rounded-2xl bg-white shadow-md">
+                    <div class="value-card-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Quality Excellence</h3>
+                    <p class="text-gray-600">We never compromise on quality. Every product in our inventory undergoes rigorous checks to ensure it meets our high standards.</p>
+                </div>
+                
+                <div class="value-card text-center p-8 rounded-2xl bg-white shadow-md">
+                    <div class="value-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Customer Commitment</h3>
+                    <p class="text-gray-600">Our customers are at the heart of everything we do. We build lasting relationships based on trust and mutual success.</p>
+                </div>
+                
+                <div class="value-card text-center p-8 rounded-2xl bg-white shadow-md">
+                    <div class="value-card-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Reliable Service</h3>
+                    <p class="text-gray-600">We understand that timelines matter in construction. Our delivery network ensures materials reach you when you need them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="journey" class="section-padding bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 section-title mx-auto">Our <span class="text-blue-700">Journey</span></h2>
+            
+            <div class="max-w-3xl mx-auto relative">
+                <div class="absolute left-0 top-0 h-full w-1 bg-blue-200 ml-1"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">2010</h3>
+                    <p class="text-gray-700">Plysource was founded with a vision to provide quality interior materials to Kerala's growing construction sector.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">2012</h3>
+                    <p class="text-gray-700">Expanded our product range to include PVC boards, responding to market demand for water-resistant materials.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">2015</h3>
+                    <p class="text-gray-700">Introduced WPC boards to our catalog, offering eco-friendly alternatives to traditional wood products.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">2018</h3>
+                    <p class="text-gray-700">Launched statewide delivery service, covering all 14 districts of Kerala with reliable logistics.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">2023</h3>
+                    <p class="text-gray-700">Celebrated 15 years of serving Kerala's construction industry with 2000+ satisfied customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+<section id="founder" class="section-padding bg-gradient-to-br from-blue-25 to-blue-50 relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute top-10 right-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-10 left-10 w-40 h-40 bg-amber-100 rounded-full opacity-30 animate-bounce-slow"></div>
+    <div class="absolute top-1/4 left-1/4 w-16 h-16 bg-blue-200 rounded-lg opacity-20 rotate-45 floating"></div>
+    
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Meet Our <span class="text-blue-700">Visionary Leader</span>
+            </h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                The driving force behind Plysource's journey to becoming Kerala's premier interior materials supplier
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Founder Image Section -->
+            <div class="relative" data-aos="fade-right" data-aos-delay="200">
+                <div class="founder-image-container rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-700">
+                    <img src="./images/11.jpeg" 
+                         alt="Subair Nalakath - CEO" 
+                         class="w-full h-96 object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+                    
+                    <!-- Vision Badge -->
+                    <div class="absolute bottom-6 right-6 bg-amber-500 text-white p-5 rounded-2xl shadow-xl transform rotate-3 pulse">
+                        <div class="text-2xl font-bold">2010</div>
+                        <div class="text-sm">Founded Plysource</div>
+                    </div>
+                </div>
+                
+                <!-- Decorative Elements -->
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-white rounded-2xl shadow-xl border-4 border-amber-400 transform rotate-12 floating" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-amber-500 text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="absolute -top-6 -right-6 w-20 h-20 bg-white rounded-2xl shadow-xl border-4 border-blue-500 transform -rotate-12 floating" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="w-full h-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-blue-500 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Founder Content Section -->
+            <div data-aos="fade-left" data-aos-delay="300">
+                <div class="space-y-8">
+                    <!-- Main Content Card -->
+                    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-xl border border-blue-100 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                                <i class="fas fa-crown mr-2"></i>Founder & CEO
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                <span class="highlight-text-premium">A visionary leader with 15+ years of expertise</span> in the interior materials industry, Subair Nalakath founded Plysource in 2010 with a mission to revolutionize Kerala's construction landscape.
+                            </p>
+                            
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                His unwavering commitment to <span class="highlight-text-premium">quality, innovation, and customer satisfaction</span> has been the cornerstone of Plysource's remarkable journey from a startup to Kerala's most trusted interior materials supplier.
+                            </p>
+                            
+                            <div class="bg-gradient-to-r from-blue-50 to-amber-50 p-6 rounded-2xl border-l-4 border-amber-500">
+                                <h4 class="text-xl font-semibold text-blue-900 mb-3 flex items-center">
+                                    <i class="fas fa-quote-left text-amber-500 mr-3"></i>
+                                    Leadership Philosophy
+                                </h4>
+                                <p class="text-gray-700 italic">
+                                    "True success lies not just in building structures, but in building trust. Every project we support is a testament to our commitment to quality and our promise to deliver excellence."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Achievements Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-md border border-blue-100 text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-map-marked-alt text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-900 mb-1">Statewide Reach</h4>
+                            <p class="text-sm text-gray-600">14 Districts</p>
+                        </div>
+                        
+                        <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-md border border-blue-100 text-center transform hover:scale-105 transition-all duration-300">
+                            <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-handshake text-white text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-blue-900 mb-1">Trusted Partner</h4>
+                            <p class="text-sm text-gray-600">2000+ Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Leadership Qualities -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="500">
+            <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-eye text-blue-600 text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-blue-900 mb-3">Visionary Thinking</h4>
+                <p class="text-gray-600">Pioneering innovative solutions for Kerala's construction industry with foresight and strategic planning.</p>
+            </div>
+            
+            <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-heart text-amber-600 text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-blue-900 mb-3">Passion for Quality</h4>
+                <p class="text-gray-600">Uncompromising commitment to delivering only the highest quality materials and services.</p>
+            </div>
+            
+            <div class="text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-blue-100 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-users text-green-600 text-2xl"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-blue-900 mb-3">Customer-Centric</h4>
+                <p class="text-gray-600">Building lasting relationships by prioritizing customer needs and exceeding expectations.</p>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="700">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-3xl shadow-xl">
+                <h3 class="text-2xl font-bold mb-4">Inspired by Our Vision?</h3>
+                <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Join thousands of satisfied customers who trust Plysource for their interior material needs. Let's build something extraordinary together.</p>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 inline-flex items-center transform hover:scale-105">
+                    Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .bg-blue-25 {
+            background-color: #f8fafc;
+        }
+        
+        .founder-image-container {
+            position: relative;
+            transition: all 0.7s ease;
+        }
+        
+        .founder-image-container:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-text-premium {
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+            color: #1e40af;
+        }
+        
+        .highlight-text-premium:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, transparent, rgba(255, 158, 27, 0.4), transparent);
+            bottom: 2px;
+            left: 0;
+            z-index: -1;
+            border-radius: 4px;
+            transform: skewX(-15deg);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1) rotate(3deg); box-shadow: 0 10px 25px rgba(255, 158, 27, 0.3); }
+            100% { transform: scale(1.05) rotate(3deg); box-shadow: 0 15px 35px rgba(255, 158, 27, 0.5); }
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce-slow 4s infinite;
+        }
+        
+        @keyframes bounce-slow {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* AOS animation styles */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+        
+        [data-aos="fade-right"] {
+            transform: translateX(-50px);
+        }
+        
+        [data-aos="fade-left"] {
+            transform: translateX(50px);
+        }
+        
+        [data-aos="fade-up"] {
+            transform: translateY(50px);
+        }
+        
+        [data-aos="zoom-in"] {
+            transform: scale(0.9);
+        }
+        
+        [data-aos].aos-animate {
+            transform: translateX(0) translateY(0) scale(1);
+        }
+    </style>
+
+    <script>
+        // Simple AOS implementation
+        document.addEventListener('DOMContentLoaded', function() {
+            const aosElements = document.querySelectorAll('[data-aos]');
+            
+            function checkScroll() {
+                aosElements.forEach(element => {
+                    const position = element.getBoundingClientRect();
+                    
+                    // If element is in viewport
+                    if(position.top < window.innerHeight * 0.85 && position.bottom >= 0) {
+                        const delay = element.getAttribute('data-aos-delay') || 0;
+                        
+                        setTimeout(function() {
+                            element.classList.add('aos-animate');
+                        }, parseInt(delay));
+                    }
+                });
+            }
+            
+            // Check on load and scroll
+            checkScroll();
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
+</section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="py-20 cta-section text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">Get in touch with us today for quotes, product information, or expert advice on your next project.</p>
+            <a href="./contact.html" class="btn-accent font-semibold px-8 py-4 rounded-full transition inline-flex items-center mx-auto">
+                Contact Us Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-32 -translate-y-32"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-amber-400 rounded-full translate-x-40 translate-y-40"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-6 py-16 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                        <i class="fas fa-layer-group text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="text-3xl font-extrabold text-white">Plysource</a>
+                        <p class="text-amber-400 text-sm font-medium">Premium Building Materials</p>
+                    </div>
+                </div>
+                <p class="text-blue-200 mb-6 text-lg leading-relaxed max-w-md">
+                    Kerala's most trusted supplier of premium PVC, WPC, and plywood boards. 
+                    Serving contractors, interior designers, and homeowners across Kerala with quality materials.
+                </p>
+                
+                <!-- Contact Info Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">📍 Location</h4>
+                                <p class="text-blue-200 text-sm">Malappuram, Calicut</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-3">
+                                <i class="fab fa-whatsapp text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">📞 WhatsApp</h4>
+                                <p class="text-blue-200 text-sm">+91 95267 44704</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="flex space-x-4">
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110 hover:shadow-lg">
+                        <i class="fab fa-facebook-f text-blue-300"></i>
+                    </a>
+                    <a href="https://www.instagram.com/plysource?igsh=cml2a2J6ZTJmc284" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110 hover:shadow-lg">
+                        <i class="fab fa-instagram text-pink-300"></i>
+                    </a>
+                    <a href="https://wa.me/919526744704" target="_blank" class="w-12 h-12 rounded-xl bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center hover:from-green-600 hover:to-green-700 transition-all duration-300 border border-green-400 hover:scale-110 hover:shadow-lg shadow-green-500/25">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-110 hover:shadow-lg">
+                        <i class="fab fa-youtube text-red-300"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 relative pb-3 inline-block">
+                    Quick Links
+                    <span class="absolute bottom-0 left-0 w-12 h-1 bg-amber-500 rounded-full"></span>
+                </h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#home" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-amber-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about.html" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-amber-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-amber-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-amber-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-chevron-right text-amber-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Products & Newsletter -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 relative pb-3 inline-block">
+                    Our Products
+                    <span class="absolute bottom-0 left-0 w-12 h-1 bg-amber-500 rounded-full"></span>
+                </h3>
+                <ul class="space-y-4 mb-8">
+                    <li>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-cube text-amber-500 text-sm mr-3 group-hover:rotate-12 transition-transform"></i>
+                            PVC Boards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-cube text-amber-500 text-sm mr-3 group-hover:rotate-12 transition-transform"></i>
+                            WPC Boards
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-cube text-amber-500 text-sm mr-3 group-hover:rotate-12 transition-transform"></i>
+                            Plywood Sheets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-200 hover:text-white transition-all duration-300 flex items-center group">
+                            <i class="fas fa-cube text-amber-500 text-sm mr-3 group-hover:rotate-12 transition-transform"></i>
+                            Doors & Accessories
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Newsletter -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+                    <h4 class="font-bold mb-3 text-white">📧 Newsletter</h4>
+                    <p class="text-blue-200 text-sm mb-4">Get updates on new products and exclusive offers</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-3 rounded-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/25 flex items-center justify-center">
+                            Subscribe <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/20 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-blue-300 text-center md:text-left mb-4 md:mb-0">
+                    <p>&copy; 2023 Plysource. All rights reserved. | Premium Building Materials Supplier</p>
+                </div>
+                
+                <div class="flex space-x-6 text-blue-300">
+                    <a href="#" class="hover:text-white transition-colors duration-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300 text-sm">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300 text-sm">Sitemap</a>
+                </div>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-6 mt-6 pt-6 border-t border-white/10">
+                <div class="flex items-center text-sm text-blue-300">
+                    <i class="fas fa-shield-alt text-amber-500 mr-2"></i>
+                    <span>Quality Certified</span>
+                </div>
+                <div class="flex items-center text-sm text-blue-300">
+                    <i class="fas fa-truck text-amber-500 mr-2"></i>
+                    <span>Free Delivery in Kerala</span>
+                </div>
+                <div class="flex items-center text-sm text-blue-300">
+                    <i class="fas fa-award text-amber-500 mr-2"></i>
+                    <span>10+ Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919526744704" target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-110 animate-bounce-slow">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+        <span class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold animate-pulse">
+            <i class="fas fa-bolt"></i>
+        </span>
+    </a>
+</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle - FIXED
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close mobile menu when clicking on links
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // Counter animation
+            function animateCounter(elementId, target) {
+                const element = document.getElementById(elementId);
+                const duration = 2000;
+                const steps = 60;
+                const stepDuration = duration / steps;
+                const stepValue = target / steps;
+                
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += stepValue;
+                    if (current >= target) {
+                        element.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + '+';
+                    }
+                }, stepDuration);
+            }
+            
+            // Start counters when section is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter('counter1', 2500);
+                        animateCounter('counter2', 14);
+                        animateCounter('counter3', 2000);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            observer.observe(document.getElementById('counter1').closest('section'));
+            
+            // Navigation dots functionality
+            const sections = document.querySelectorAll('section[id]');
+            const navDots = document.querySelectorAll('.nav-dot');
+            
+            function updateActiveNavDot() {
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        navDots.forEach(dot => dot.classList.remove('active'));
+                        navDots[index].classList.add('active');
+                    }
+                });
+            }
+            
+            // Initial call
+            updateActiveNavDot();
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', updateActiveNavDot);
+            
+            // Add click event to navigation dots
+            navDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const section = sections[index];
+                    window.scrollTo({
+                        top: section.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
